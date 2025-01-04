@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Login to Red Store to access your account.">
+    <meta name="author" content="Red Store Team">
+    <title>Login | Red Store</title>
+    <link rel="stylesheet" href="/frountend/style.css">
+    <!-- Favicon -->
+    <link rel="icon" href="/frontend/favicon.ico">
+</head>
+<body>
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="container">
+            <h1 class="logo"><a href="/" class="logo-link">Red Store</a></h1>
+            <nav>
+                <ul>
+                    <li><a href="/frountend/index.html" class="nav-link">Home</a></li>
+                    <li><a href="#" class="nav-link">Products</a></li>
+                    <li><a href="/frountend/about.html" class="nav-link">About</a></li>
+                    <li><a href="#" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+            <!-- Authentication Links -->
+            
+        </div>
+    </header>
+
+    <!-- Login Section -->
+    <main class="login">
+        <div class="container">
+            <h2 class="login-heading">Login to Your Account</h2>
+            <form id="loginForm" action="/login_sign/login.html" method="POST" class="login-form">
+                <div class="form-group">
+                    <label for="username" class="form-label">Username</label>
+                    <input type="text" id="username" name="username" placeholder="Enter your username" required class="form-input">
+                </div>
+                <div class="form-group">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Enter your password" required class="form-input">
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn primary-btn">Login</button>
+                </div>
+                <div class="form-group">
+                    <p class="form-footer-text">Don't have an account? <a href="/login_sign/signup.html" class="form-footer-link">Sign Up</a></p>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Red Store. All Rights Reserved.</p>
+            <div class="footer-links">
+                <a href="#" class="footer-link">Privacy Policy</a> |
+                <a href="#" class="footer-link">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/frountend/script.js"></script>
+</body>
+</html>
