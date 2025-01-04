@@ -5,8 +5,159 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up | Red Store</title>
     <link rel="stylesheet" href="/frountend/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        .navbar {
+            background-color: #ff4d4d;
+            padding: 15px 0;
+            color: white;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .navbar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        .navbar .logo {
+            font-size: 1.8em;
+            font-weight: 700;
+        }
+        .navbar nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+        .navbar nav ul li {
+            margin-left: 20px;
+        }
+        .navbar nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: 500;
+            font-size: 1.1em;
+        }
+        .navbar nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        /* Sign-Up Section */
+        .signup {
+            background-color: #fff;
+            padding: 60px 0;
+        }
+        .signup .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .form-wrapper {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .form-wrapper h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #ff4d4d;
+        }
+        .form-description {
+            color: #777;
+            margin-bottom: 30px;
+            font-size: 1.1em;
+        }
+        .form-field {
+            margin-bottom: 20px;
+        }
+        .form-field label {
+            display: block;
+            font-weight: 500;
+            margin-bottom: 8px;
+            text-align: left;
+            font-size: 1.1em;
+        }
+        .form-field input {
+            width: 100%;
+            padding: 15px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            font-size: 1.1em;
+            margin-bottom: 10px;
+            transition: border 0.3s ease;
+        }
+        .form-field input:focus {
+            border-color: #ff4d4d;
+            outline: none;
+        }
+        .btn {
+            background-color: #ff4d4d;
+            color: white;
+            font-size: 1.2em;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .btn:hover {
+            background-color: #e04343;
+        }
+        .login-redirect {
+            margin-top: 20px;
+            font-size: 1.1em;
+        }
+        .login-redirect a {
+            text-decoration: none;
+            color: #ff4d4d;
+            font-weight: 500;
+        }
+        .login-redirect a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #333;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        .footer p {
+            font-size: 1em;
+            margin: 0;
+        }
+
+        /* Responsive Design */
+        @media screen and (max-width: 768px) {
+            .navbar .container {
+                flex-direction: column;
+                text-align: center;
+            }
+            .navbar nav ul {
+                flex-direction: column;
+            }
+            .form-wrapper {
+                padding: 20px;
+            }
+        }
+    </style>
 </head>
 <body>
+
     <!-- Navbar -->
     <header class="navbar">
         <div class="container">
@@ -15,7 +166,9 @@
                 <ul>
                     <li><a href="/frountend/index.html" class="nav-link">Home</a></li>
                     <li><a href="/login_sign/login.html" class="nav-link">Login</a></li>
-                   
+                    <li><a href="/frountend/products.html" class="nav-link">Products</a></li>
+                    <li><a href="/frountend/about.html" class="nav-link">About</a></li>
+                    <li><a href="/frountend/contact.html" class="nav-link">Contact</a></li>
                 </ul>
             </nav>
         </div>
@@ -29,18 +182,18 @@
                 <p class="form-description">Sign up to enjoy exclusive offers and the latest trends.</p>
 
                 <!-- Sign-Up Form -->
-                <form id="signupForm" class="form">
+                <form id="signupForm" action="/login_sign/signup.html" method="POST" class="form">
                     <div class="form-field">
                         <label for="newUsername">Username</label>
-                        <input type="text" id="newUsername" placeholder="Choose a username" required>
+                        <input type="text" id="newUsername" name="newUsername" placeholder="Choose a username" required>
                     </div>
                     <div class="form-field">
                         <label for="email">Email</label>
-                        <input type="email" id="email" placeholder="Your email address" required>
+                        <input type="email" id="email" name="email" placeholder="Your email address" required>
                     </div>
                     <div class="form-field">
                         <label for="newPassword">Password</label>
-                        <input type="password" id="newPassword" placeholder="Create a password" required>
+                        <input type="password" id="newPassword" name="newPassword" placeholder="Create a password" required>
                     </div>
                     <button type="submit" class="btn">Sign Up</button>
                 </form>
