@@ -26,7 +26,7 @@ body {
 
 /* Navbar */
 .navbar {
-    background-color: #ff4d4d;
+    background-color:#87CEEB;
     padding: 1rem 2rem;
     display: flex;
     justify-content: space-between;
@@ -35,7 +35,7 @@ body {
     position: sticky;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for better depth */
+    box-shadow: 0 2px 5px rgba(21, 136, 165, 0.1); /* Subtle shadow for better depth */
 }
 
 .navbar .logo {
@@ -101,7 +101,7 @@ body {
 .hero .btn {
     display: inline-block;
     padding: 1rem 2rem;
-    background-color: #ff4d4d;
+    background-color: #f07a7a;
     color: white;
     text-decoration: none;
     border-radius: 5px;
@@ -110,7 +110,7 @@ body {
 }
 
 .hero .btn:hover {
-    background-color: #e63939;
+    background-color: #e97676;
     transform: scale(1.05);
 }
 
